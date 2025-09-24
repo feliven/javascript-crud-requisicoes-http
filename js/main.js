@@ -1,22 +1,19 @@
 import interfaceUsuario from "./ui.js";
 import api from "./api.js";
 
-const botaoCancelar = document.getElementById("botao-cancelar");
-
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("pensamento-form");
+  const botaoCancelar = document.getElementById("botao-cancelar");
 
   formulario.addEventListener("submit", manipularFormulario);
+  botaoCancelar.addEventListener("click", limparFormulario);
 
   interfaceUsuario.exibirPensamentos();
 });
 
-botaoCancelar.addEventListener("click", () => {
-  const novoConteudoPensamento = document.getElementById("pensamento-conteudo");
-  const novaAutoriaPensamento = document.getElementById("pensamento-autoria");
-  novoConteudoPensamento.value = "";
-  novaAutoriaPensamento.value = "";
-});
+function limparFormulario() {
+  interfaceUsuario.limparFormulario();
+}
 
 async function manipularFormulario(evento) {
   evento.preventDefault();

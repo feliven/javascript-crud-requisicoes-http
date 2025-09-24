@@ -33,6 +33,11 @@ const interfaceUsuario = {
     ulListaPensamentos.appendChild(liPensamento);
     console.log(liPensamento);
   },
+
+  limparFormulario() {
+    const formulario = document.getElementById("pensamento-form");
+    formulario.reset();
+  },
 };
 
 export default interfaceUsuario;
