@@ -3,7 +3,7 @@ import api from "./api.js";
 const interfaceUsuario = {
   async exibirPensamentos() {
     try {
-      const arrayPensamentos = await api.buscarPensamentos();
+      const arrayPensamentos = await api.getListaPensamentos();
       arrayPensamentos.forEach(interfaceUsuario.adicionarPensamentoNaLista);
     } catch (error) {
       alert("ERRO NA UI");
