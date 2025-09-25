@@ -1,10 +1,39 @@
 import api from "./api.js";
 
 const interfaceUsuario = {
-  async exibirPensamentos() {
+  async exibirFormularioEPensamentos() {
     try {
+      const containerFormulario = document.getElementById("form-container");
       const arrayPensamentos = await api.getListaPensamentos();
-      arrayPensamentos.forEach(interfaceUsuario.adicionarPensamentoNaLista);
+
+      if (arrayPensamentos.length === 0 || !arrayPensamentos.length) {
+        // se lista estiver vazia...
+        const containerAdicionarPensamentos = document.getElementById("adicionar-pensamentos");
+        const botaoAdicionarPensamentos = document.getElementById("botao-adicionar-pensamentos");
+
+        // exibir área com botão grande "Adicionar pensamentos"
+        containerAdicionarPensamentos.style.display = "flex";
+
+        // fazer formulário aparecer ao clicar no botão "Adicionar pensamentos"
+        botaoAdicionarPensamentos.addEventListener("click", () => {
+          containerFormulario.style.display = "flex";
+          containerAdicionarPensamentos.style.display = "none";
+        });
+      } else {
+        // se lista tiver elementos...
+        const listaPensamentos = document.getElementById("lista-pensamentos");
+        const elementoListaVazia = document.getElementById("lista-vazia");
+
+        // mostrar área de formulário
+        containerFormulario.style.display = "flex";
+
+        // esconde elemento de lista vazia
+        elementoListaVazia.style.display = "none";
+
+        // e exibir a lista de pensamentos
+        listaPensamentos.style.display = "flex";
+        arrayPensamentos.forEach(interfaceUsuario.adicionarPensamentoNaLista);
+      }
     } catch (error) {
       alert("ERRO NA UI");
     }

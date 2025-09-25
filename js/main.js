@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   formulario.addEventListener("submit", manipularFormulario);
   botaoCancelar.addEventListener("click", limparFormulario);
 
-  interfaceUsuario.exibirPensamentos();
+  interfaceUsuario.exibirFormularioEPensamentos();
 });
 
 function limparFormulario() {
