@@ -42,6 +42,7 @@ const interfaceUsuario = {
 
     const botaoApagar = document.createElement("button");
     botaoApagar.classList.add("botao-apagar");
+    botaoApagar.onclick = () => api.apagarPensamento(pensamento.id);
     botaoApagar.appendChild(iconeApagar);
 
     const botoesPensamento = document.createElement("div");

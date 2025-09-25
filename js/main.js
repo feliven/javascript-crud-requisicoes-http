@@ -21,10 +21,6 @@ async function manipularFormulario(evento) {
   const autoria = document.getElementById("pensamento-autoria").value;
   const id = document.getElementById("pensamento-id").value;
 
-  console.log(id);
-  console.log(conteudo);
-  console.log(autoria);
-
   try {
     if (id) {
       await api.editarPensamento({ id, conteudo, autoria });

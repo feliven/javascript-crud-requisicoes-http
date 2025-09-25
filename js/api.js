@@ -46,6 +46,17 @@ const api = {
       throw error;
     }
   },
+
+  async apagarPensamento(id) {
+    try {
+      await fetch(`http://localhost:3000/pensamentos/${id}`, {
+        method: "DELETE",
+      });
+    } catch (error) {
+      alert("ERRO AO APAGAR PENSAMENTO");
+      throw error;
+    }
+  },
 };
 
 export default api;
