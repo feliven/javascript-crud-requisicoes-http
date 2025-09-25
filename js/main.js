@@ -27,7 +27,7 @@ async function manipularFormulario(evento) {
     } else {
       await api.salvarPensamento({ conteudo, autoria });
     }
-    interfaceUsuario.exibirPensamentos();
+    interfaceUsuario.exibirFormularioEPensamentos();
   } catch (error) {
     alert("erro ao SALVAR");
   }
