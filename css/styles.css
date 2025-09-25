@@ -188,8 +188,17 @@ h2, h3 {
   min-width: 160px;
 }
 
+#botao-salvar:hover {
+ background: blue
+}
+
 #botao-cancelar {
   color: var(--Azul-Dark, #041832);
+}
+
+#botao-cancelar:hover{
+background-color: yellow;
+
 }
 
 #lista-pensamentos-container {
@@ -264,7 +273,7 @@ h2, h3 {
   right: 16px;
 }
 
-.botao-editar, .botao-excluir {
+.botao-editar, .botao-apagar {
   background: none;
   border: none;
   cursor: pointer;
@@ -272,7 +281,7 @@ h2, h3 {
   margin-left: 8px;
 }
 
-.botao-editar img, .botao-excluir img {
+.botao-editar img, .botao-apagar img {
   width: 20px;
   height: 20px;
 }
