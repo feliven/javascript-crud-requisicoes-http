@@ -11,16 +11,18 @@
     <header>
       <div class="conteudo-cabecalho">
         <div class="logo">
-          <img src="assets/imagens/logo.png" alt="">
-          <h1>Trechos de músicas,<br> citações de livros e
-            <br> <strong>suas melhores ideias
-            <br> num só lugar!</strong>
+          <img src="assets/imagens/logo.png" alt="" />
+          <h1>
+            Trechos de músicas,<br />
+            citações de livros e <br />
+            <strong
+              >suas melhores ideias <br />
+              num só lugar!</strong
+            >
           </h1>
         </div>
         <div class="imagem-cabecalho">
-          <img 
-            src="assets/imagens/computador-cabecalho.png" 
-            alt="">
+          <img src="assets/imagens/computador-cabecalho.png" alt="" />
         </div>
       </div>
     </header>
@@ -28,6 +30,7 @@
       <div class="overlay"></div>
       <div class="overlay overlay-color"></div>
       <h2>Adicione um pensamento novo:</h2>
+      <div class="form-botoes"><button type="submit" id="botao-salvar">Adicionar pensamentos</button></div>
       <section id="form-container">
         <form id="pensamento-form">
           <input type="hidden" id="pensamento-id" />
@@ -44,13 +47,15 @@
       <span></span>
       <section id="lista-pensamentos-container">
         <h3>Meu Mural</h3>
+        <div id="lista-vazia">
+          <p>Nada por aqui ainda, que tal compartilhar alguma ideia?</p>
+          <img src="./assets/imagens/lista-vazia.png" alt="" srcset="" />
+        </div>
         <ul id="lista-pensamentos"></ul>
       </section>
     </main>
     <footer>
-      <p>&copy; 
-        2024 Desenvolvido por Alura. 
-        Projeto fictício sem fins comerciais.</p>
+      <p>&copy; 2024 Desenvolvido por Alura. Projeto fictício sem fins comerciais.</p>
     </footer>
   </body>
 </html>
